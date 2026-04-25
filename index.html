@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah's Game Inventory - Portfolio</title>
+    <link rel="stylesheet" href="css/inventory-styles.css">
+    <script src="js/inventory-script.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <div class="back-button-container hidden">
+                <button class="back-btn" id="back-btn">← Back to Inventory</button>
+            </div>
+            <div class="character-info">
+                <div class="avatar">
+                    <img src="assets/images/avatar.png" alt="Abdullah's Avatar" onerror="this.style.display='none'">
+                    <div class="avatar-placeholder">🎮</div>
+                </div>
+                <div class="character-details">
+                    <h1>Abdullah Al-Otaibi</h1>
+                    <p class="character-title">Level 22 Game Developer</p>
+                    <div class="stats">
+                        <span class="stat">🎯 Skills: 85</span>
+                        <span class="stat">💻 Projects: 12</span>
+                        <span class="stat">🏆 Experience: 3 Years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="game-menu">
+                <button class="menu-btn active" data-tab="inventory">Inventory</button>
+                <button class="menu-btn" data-tab="skills">Skills</button>
+                <button class="menu-btn" data-tab="quests">Quests</button>
+                <button class="menu-btn" data-tab="achievements">Achievements</button>
+            </div>
+            <div id="secret-hint" class="secret-hint hidden"></div>
+        </header>
+
+        <main class="game-main">
+            <!-- Inventory Tab -->
+            <div id="inventory" class="tab-content active">
+                <h2>Inventory</h2>
+                <p class="tab-description">Click on items to learn more about my journey and capabilities</p>
+
+                <div class="inventory-grid">
+                    <!-- Row 1 -->
+                    <div class="inventory-slot" data-item="about">
+                        <div class="item-icon">👨‍💻</div>
+                        <div class="item-name">About Me</div>
+                        <div class="item-rarity">Common</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="skills">
+                        <div class="item-icon">⚡</div>
+                        <div class="item-name">Technical Skills</div>
+                        <div class="item-rarity">Rare</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="projects">
+                        <div class="item-icon">🎮</div>
+                        <div class="item-name">Game Projects</div>
+                        <div class="item-rarity">Epic</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="experience">
+                        <div class="item-icon">💼</div>
+                        <div class="item-name">Experience</div>
+                        <div class="item-rarity">Uncommon</div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="inventory-slot" data-item="education">
+                        <div class="item-icon">🎓</div>
+                        <div class="item-name">Education</div>
+                        <div class="item-rarity">Common</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="tools">
+                        <div class="item-icon">🛠️</div>
+                        <div class="item-name">Dev Tools</div>
+                        <div class="item-rarity">Rare</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="integrations">
+                        <div class="item-icon">🔗</div>
+                        <div class="item-name">APIs & Services</div>
+                        <div class="item-rarity">Rare</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="contact">
+                        <div class="item-icon">📧</div>
+                        <div class="item-name">Contact Info</div>
+                        <div class="item-rarity">Common</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="hobbies">
+                        <div class="item-icon">🎯</div>
+                        <div class="item-name">Hobbies</div>
+                        <div class="item-rarity">Uncommon</div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="inventory-slot empty">
+                        <div class="item-icon">❓</div>
+                        <div class="item-name">???</div>
+                        <div class="item-rarity">Legendary</div>
+                    </div>
+
+                    <div class="inventory-slot empty">
+                        <div class="item-icon">🎁</div>
+                        <div class="item-name">Coming Soon</div>
+                        <div class="item-rarity">???</div>
+                    </div>
+
+                    <div class="inventory-slot" data-item="secret">
+                        <div class="item-icon">🕵️</div>
+                        <div class="item-name">Secret Item</div>
+                        <div class="item-rarity">Mythic</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div id="skills" class="tab-content">
+                <h2>Skills Tree</h2>
+                <div class="skills-tree">
+                    <div class="skill-category">
+                        <h3>🎮 Game Development</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%"></div>
+                            <span class="skill-level">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>💻 Programming</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%"></div>
+                            <span class="skill-level">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🎨 Design</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%"></div>
+                            <span class="skill-level">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🤝 Teamwork</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 95%"></div>
+                            <span class="skill-level">95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quests Tab -->
+            <div id="quests" class="tab-content">
+                <h2>Active Quests</h2>
+                <div class="sort-controls">
+                    <button class="sort-btn active" data-sort="default">Default Order</button>
+                    <button class="sort-btn" data-sort="alphabetical">Alphabetical</button>
+                    <button class="sort-btn" data-sort="important">Important to Me</button>
+                    <button class="sort-btn" data-sort="progress">Close to Complete</button>
+                </div>
+                <div class="quests-list">
+                    <div class="quest-item" data-priority="4" data-progress="60">
+                        <div class="quest-icon">🎯</div>
+                        <div class="quest-details">
+                            <h4>Complete Game Development Certification</h4>
+                            <p>Progress: 3/5 courses completed</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quest-item" data-priority="2" data-progress="25">
+                        <div class="quest-icon">🚀</div>
+                        <div class="quest-details">
+                            <h4>Launch Indie Game</h4>
+                            <p>Progress: Prototype phase</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quest-item" data-priority="6" data-progress="10">
+                        <div class="quest-icon">💡</div>
+                        <div class="quest-details">
+                            <h4>Learn New Programming Language</h4>
+                            <p>Progress: Researching options</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quest-item" data-priority="5" data-progress="70">
+                        <div class="quest-icon">⚔️</div>
+                        <div class="quest-details">
+                            <h4>Reach 3500 Rating in Mythic+</h4>
+                            <p>Progress: Climbing the ladder</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quest-item" data-priority="1" data-progress="75">
+                        <div class="quest-icon">🎓</div>
+                        <div class="quest-details">
+                            <h4>Finish Computer Science Degree</h4>
+                            <p>Progress: In progress at KFUPM</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quest-item" data-priority="3" data-progress="30">
+                        <div class="quest-icon">🌌</div>
+                        <div class="quest-details">
+                            <h4>Create My Dream Game</h4>
+                            <p>Progress: Designing core systems & combat</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quest-item" data-priority="7" data-progress="0">
+                        <div class="quest-icon">🔒</div>
+                        <div class="quest-details">
+                            <h4>??? Hidden Quest ???</h4>
+                            <p>Progress: Unknown</p>
+                            <div class="quest-progress">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Achievements Tab -->
+            <div id="achievements" class="tab-content">
+                <h2>Achievements Unlocked</h2>
+                <div class="achievements-grid">
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-details">
+                            <h4>First Game Published</h4>
+                            <p>Successfully released your first game project</p>
+                        </div>
+                    </div>
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">🎓</div>
+                        <div class="achievement-details">
+                            <h4>Computer Science Graduate</h4>
+                            <p>Completed Bachelor's degree in Computer Science</p>
+                        </div>
+                    </div>
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">👥</div>
+                        <div class="achievement-details">
+                            <h4>Team Player</h4>
+                            <p>Successfully collaborated on 5+ team projects</p>
+                        </div>
+                    </div>
+                    <div class="achievement locked">
+                        <div class="achievement-icon">🌟</div>
+                        <div class="achievement-details">
+                            <h4>Game Dev Legend</h4>
+                            <p>Publish 10 games (Coming Soon)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item Detail View -->
+            <div id="item-detail" class="tab-content hidden">
+                <div class="item-detail-header">
+                    <div class="item-detail-icon"></div>
+                    <div class="item-detail-title"></div>
+                </div>
+                <div class="item-detail-content">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html></content>
